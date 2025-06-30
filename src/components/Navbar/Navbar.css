@@ -1,0 +1,191 @@
+.navbar {
+  background-color: #fff;
+  padding: 10px 20px;
+  border-bottom: 1px solid #eee;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: top 0.3s ease, opacity 0.3s ease;
+  position: sticky;
+}
+
+/* Top section containing menu, logo, and icons */
+.navbar-top {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: space-between;
+}
+
+/* Logo centered absolutely */
+.logo {
+  flex: 1;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: bold;
+  font-family: 'Dancing Script', cursive;
+}
+
+.logo span {
+  color: #f24e4e;
+  font-size: 0.9rem;
+}
+
+/* Icons section */
+.icons {
+  display: flex;
+  gap: 18px;
+  font-size: 1.3rem;
+  align-items: center;
+}
+
+/* Menu button style */
+.menu-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  z-index: 1001;
+    display: none;
+}
+
+/* Desktop nav links */
+.nav-links {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 10px;
+}
+
+.nav-links a {
+  font-family: 'Futura', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 100;
+  font-size: 11px;
+  color: #000;
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  color: #d63384;
+}
+
+.navbar.hidden {
+  top: -100px; /* slide up when hidden */
+  opacity: 0;
+  pointer-events: none;
+}
+
+.navbar.visible {
+  top: 0;
+  opacity: 1;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    max-height: 0;
+    overflow: hidden;
+    width: 100%;
+    background-color: #fff;
+    transition: max-height 0.3s ease;
+  }
+
+  .nav-links.open {
+    max-height: 500px;
+    padding: 10px 0;
+  }
+}
+.navbar {
+  background-color: #fff;
+  padding: 10px 20px;
+  border-bottom: 1px solid #eee;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Top section containing menu, logo, and icons */
+.navbar-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo centered absolutely */
+.logo {
+  flex: 1;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: bold;
+  font-family: 'Dancing Script', cursive;
+}
+
+.logo span {
+  color: #f24e4e;
+  font-size: 0.9rem;
+}
+
+/* Icons section */
+.icons {
+  display: flex;
+  gap: 18px;
+  font-size: 1.3rem;
+  align-items: center;
+}
+
+/* Menu button style */
+.menu-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  z-index: 1001;
+}
+
+/* Desktop nav links */
+.nav-links {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 10px;
+}
+
+.nav-links a {
+  font-family: 'Futura', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 100;
+  font-size: 11px;
+  color: #000;
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  color: #d63384;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    max-height: 0;
+    overflow: hidden;
+    width: 100%;
+    background-color: #fff;
+    transition: max-height 0.3s ease;
+  }
+
+  .nav-links.open {
+    max-height: 500px;
+    padding: 10px 0;
+  }
+
+    .menu-btn {
+    display: block; /* show only on mobile */
+  }
+}

@@ -1,0 +1,117 @@
+.bigProduct-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 30px;
+  padding: 40px;
+}
+
+.bigProduct-card {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.bigProduct-image {
+  width: 100%;
+  height: auto;
+  display: block;
+     transition: transform 1s ease-in-out;
+  transform: scale(1); 
+}
+
+.bigProduct-card:hover .bigProduct-image {
+  transform: scale(1.1);
+}
+
+.bigProduct-card:hover .zoom-icon {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.bigProduct-info {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  padding: 15px;
+  color: white;
+  text-align: left;
+}
+
+.bigProduct-info-Text {
+  font-family: 'Futura', sans-serif;
+  letter-spacing: 3px;
+  font-weight: 100;
+  font-size: 22px;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+}
+
+.view-button {
+  display: inline-flex;
+  width: 180px;                 
+  height: 45px;              
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  cursor: pointer;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  font-family: 'Futura', sans-serif;
+  font-size: 14px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;    
+}
+
+.view-button:hover {
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+}
+
+
+
+
+@media (max-width: 768px) {
+    .bigProduct-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 15px;
+    }
+    
+    .bigProduct-info {
+        padding: 15px;
+    }
+    
+    .view-button {
+        width: 160px;
+        height: 40px;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 480px) {
+    .bigProduct-container {
+        padding: 10px;
+    }
+    
+    .bigProduct-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .bigProduct-info-Text {
+        letter-spacing: 1px;
+    }
+    
+    .view-button {
+        width: 140px;
+        height: 36px;
+        font-size: 12px;
+    }
+}

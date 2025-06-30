@@ -1,0 +1,164 @@
+.filter-sidebar {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 320px;
+  height: 100%;
+  background: #fff;
+  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.15);
+  transition: right 0.3s ease-in-out;
+  z-index: 999;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.filter-sidebar.open {
+  right: 0;
+}
+
+.filter-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  border-bottom: 1px solid #e5e5e5;
+  padding-bottom: 12px;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.filter-section {
+  margin-bottom: 24px;
+}
+
+.filter-section h4 {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 12px;
+  letter-spacing: 0.5px;
+}
+
+/* Toggle switch */
+.toggle-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.toggle-wrapper input {
+  display: none;
+}
+
+.toggle-slider {
+  width: 40px;
+  height: 20px;
+  background: #ccc;
+  border-radius: 20px;
+  position: relative;
+}
+
+.toggle-slider::before {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  top: 1px;
+  left: 1px;
+  background: #fff;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.toggle-wrapper input:checked + .toggle-slider::before {
+  transform: translateX(20px);
+  background: #fff;
+}
+
+.toggle-wrapper input:checked + .toggle-slider {
+  background: #000;
+}
+
+.toggle-label {
+  font-size: 13px;
+}
+
+/* Price */
+.price-slider {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.price-slider input[type="range"] {
+  flex: 1;
+  appearance: none;
+  height: 4px;
+  background: black;
+  outline: none;
+}
+
+.price-inputs {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.price-inputs input {
+  width: 60px;
+  padding: 4px 6px;
+  font-size: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Colors */
+.color-options {
+  display: flex;
+  gap: 12px;
+}
+
+.color-circle {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 1px solid #333;
+  cursor: pointer;
+}
+
+/* Sizes */
+.size-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.size-options span {
+  font-size: 14px;
+  color: #333;
+  cursor: pointer;
+}
+
+/* View Results Button */
+.view-results-btn {
+  background: #111;
+  color: white;
+  font-size: 14px;
+  padding: 12px;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  letter-spacing: 1px;
+  transition: background 0.2s ease;
+}
+
+.view-results-btn:hover {
+  background: #333;
+}
