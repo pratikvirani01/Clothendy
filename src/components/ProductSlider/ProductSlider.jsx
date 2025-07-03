@@ -1,6 +1,7 @@
 import React, { useState, useRef } from "react";
 import "./ProductSlider.css";
 import { IoCart } from "react-icons/io5";
+import { IoMdAdd } from "react-icons/io";
 
 const ProductSlider = ({ products }) => {
     const [startIndex, setStartIndex] = useState(0);
@@ -51,10 +52,16 @@ const ProductSlider = ({ products }) => {
                             <img
                                 src={item.image}
                                 alt={item.title}
-                                className="product-image"
+                                className="product-image main-image"
                             />
+                            {item.hoverImage && (
+                                <img
+                                    src={item.hoverImage}
+                                    className="product-image hover-image"
+                                />
+                            )}
                             <button className="add-to-cart-btn" title="Add to Cart">
-                                <IoCart size={20} />
+                                <IoMdAdd size={20} />
                             </button>
                         </div>
                         <h3 className="product-title">{item.title}</h3>

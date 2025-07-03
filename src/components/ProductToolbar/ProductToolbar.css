@@ -1,16 +1,82 @@
 .product-toolbar {
+  background: #f5f5f5;
+  border-top: 1px solid #ddd;
+  /* border-bottom: 1px solid #ddd; */
+  padding: 12px 24px;
+}
+
+.top-row {
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
-  padding: 16px 24px;
-  background: #f5f5f5; 
   align-items: center;
-  border-top: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
+  flex-wrap: wrap;
+}
+
+.view-icons {
+  display: flex;
+  gap: 12px;
+}
+
+.view-icon {
+  width: 20px;
+  height: 20px;
+  background-color: #333;
+  border: none;
+  cursor: pointer;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  /* gap: 16px; */
+}
+
+.sort-select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  padding: 16px 5px;
+  border: none;
+  border: none; /* Remove all borders first */
+  border-left: 1px solid #ccc; /* ✅ Left border */
+  border-right: 1px solid #ccc;
+  background: #f5f5f5;
+  font-size: 14px;
+  color: #aeaeae;
+  cursor: pointer;
+  text-align: center;
+
+  background-image: none;
+  /* border-left: ; */
+}
+
+.sort-select:hover {
+  color: #1c1c1c;
+}
+
+.sort-select:focus {
+  outline: none;
+  border-color: #999;
+}
+
+.filter-btn {
+  padding: 16.5px 25px;
+  background: transparent;
+  border: none;
+  font-size: 14px;
+  color: #999;
+  cursor: pointer;
+}
+
+.filter-btn:hover {
+  color: #1c1c1c;
 }
 
 .size-buttons {
+  margin-top: 16px;
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 12px;
 }
@@ -34,34 +100,16 @@
   background-color: #e4e0da;
 }
 
-.actions {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  margin-top: 12px;
-}
-
-.sort-select {
-  padding: 8px 12px;
-  border: 1px solid #e0e0e0; 
-  border-radius: 4px;
-  background: #f1f1f1;
-  font-size: 14px;
-  color: #333;
-  cursor: pointer;
-}
-
-.filter-btn {
-  padding: 8px 16px;
-  background: transparent;
+.slider-separators {
   border: none;
-  font-size: 14px;
-  color: #333;
-  cursor: pointer;
+  border-top: 1px solid #e0e0e0;
+  width: 100%;
+  margin: 10px 0;
 }
 
+/* Responsive for mobile */
 @media screen and (max-width: 768px) {
-  .product-toolbar {
+  .top-row {
     flex-direction: column;
     align-items: flex-start;
     gap: 12px;
@@ -70,5 +118,9 @@
   .actions {
     width: 100%;
     justify-content: flex-end;
+  }
+
+  .size-buttons {
+    justify-content: center;
   }
 }
