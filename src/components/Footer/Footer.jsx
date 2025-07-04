@@ -1,5 +1,5 @@
-import React, { useEffect, useRef } from 'react';
-import { Users, ZoomIn as Loom, Heart, ShoppingBag, Home, Facebook, Instagram, Youtube, MessageSquare, ChevronDown } from 'lucide-react';
+import React, { useEffect, useRef, } from 'react';
+import { Users, ZoomIn as Loom, Heart, ShoppingBag, Home, Facebook, Instagram, Youtube, MessageSquare, ChevronDown, Image } from 'lucide-react';
 import './Footer.css';
 
 const Footer = () => {
@@ -39,7 +39,13 @@ const Footer = () => {
                         {/* Uniquely Curated */}
                         <div className="benefit-item">
                             <div className="benefit-icon">
-                                <Users size={64} color="#1f2937" strokeWidth={1} />
+                                {/* <Users size={64} color="#1f2937" strokeWidth={1} /> */}
+                                <img
+                                    src="/Icons-03.png"
+                                    alt="Icon"
+                                    width={80} 
+                                    height={80}
+                                />
                             </div>
                             <h3 className="benefit-title">
                                 Uniquely Curated
@@ -52,7 +58,13 @@ const Footer = () => {
                         {/* Handloom */}
                         <div className="benefit-item">
                             <div className="benefit-icon">
-                                <Loom size={64} color="#1f2937" strokeWidth={1} />
+                                {/* <Loom size={64} color="#1f2937" strokeWidth={1} /> */}
+                                <img
+                                    src="/Icons-02.png"
+                                    alt="Icon"
+                                    width={80} 
+                                    height={80}
+                                />
                             </div>
                             <h3 className="benefit-title">
                                 Handloom
@@ -65,7 +77,13 @@ const Footer = () => {
                         {/* Supporting Artisans */}
                         <div className="benefit-item">
                             <div className="benefit-icon">
-                                <Heart size={64} color="#1f2937" strokeWidth={1} />
+                                {/* <Heart size={64} color="#1f2937" strokeWidth={1} /> */}
+                                <img
+                                    src="/Icons-01.png"
+                                    alt="Icon"
+                                    width={80} 
+                                    height={80}
+                                />
                             </div>
                             <h3 className="benefit-title">
                                 Supporting Artisans
@@ -78,7 +96,13 @@ const Footer = () => {
                         {/* Seamless Shopping */}
                         <div className="benefit-item">
                             <div className="benefit-icon">
-                                <ShoppingBag size={64} color="#1f2937" strokeWidth={1} />
+                                {/* <ShoppingBag size={64} color="#1f2937" strokeWidth={1} /> */}
+                                <img
+                                    src="/Icons-05.png"
+                                    alt="Icon"
+                                    width={80} 
+                                    height={80}
+                                />
                             </div>
                             <h3 className="benefit-title">
                                 Seamless Shopping
@@ -91,7 +115,13 @@ const Footer = () => {
                         {/* Home Grown */}
                         <div className="benefit-item">
                             <div className="benefit-icon">
-                                <Home size={64} color="#1f2937" strokeWidth={1} />
+                                {/* <Home size={64} color="#1f2937" strokeWidth={1} /> */}
+                                <img
+                                    src="/Icons-04.png"
+                                    alt="Icon"
+                                    width={80} 
+                                    height={80}
+                                />
                             </div>
                             <h3 className="benefit-title">
                                 Home Grown

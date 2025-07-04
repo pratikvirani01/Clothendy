@@ -4,7 +4,7 @@
   border-bottom: 1px solid #eee;
   position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: 999;
   transition: top 0.3s ease, opacity 0.3s ease;
   position: sticky;
 }

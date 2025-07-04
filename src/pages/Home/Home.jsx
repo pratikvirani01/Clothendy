@@ -81,6 +81,23 @@ const Home = () => {
     return () => clearInterval(timer);
   }, []);
 
+  const [showModal, setShowModal] = useState(false);
+  const [phone, setPhone] = useState("+91");
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowModal(true);
+    }, 10000); // 10 seconds
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  const handleJoin = () => {
+    alert(`Phone number submitted: ${phone}`);
+    setShowModal(false);
+  };
+
+
   const bigProducts = [
     {
       title: "Pure Kanchipuram Silk Sarees",
@@ -163,6 +180,31 @@ const Home = () => {
       <hr className="slider-separator" />
 
       <BigProduct bigProducts={bigProducts} />
+      <div>
+        {showModal && (
+          <div className="overlay">
+            <div className="modal">
+              <button className="close-btn" onClick={() => setShowModal(false)}>
+                ×
+              </button>
+              <h2>Welcome To Thenmozhi Designs</h2>
+              <p>
+                Join us and be the first to get notified when we launch our
+                exclusive collections.
+              </p>
+              <input
+                type="text"
+                value={phone}
+                onChange={(e) => setPhone(e.target.value)}
+                className="phone-input"
+              />
+              <button className="join-button" onClick={handleJoin}>
+                Join Us
+              </button>
+            </div>
+          </div>
+        )}
+      </div>
       <Footer />
     </div>
   );
