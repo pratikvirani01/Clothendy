@@ -41,7 +41,7 @@
   font-size: 2rem;
   letter-spacing: 2px;
   margin-bottom: 1rem;
-  font-family: 'Futura', sans-serif;
+ font-family: 'Jost';
 }
 
 .shop-now-btn {
@@ -55,7 +55,7 @@
   letter-spacing: 2px;
   transition: background 0.3s ease;
   text-decoration: none;
-  font-family: 'Futura', sans-serif;
+ font-family: 'Jost';
 }
 
 .shop-now-btn:hover {
@@ -128,7 +128,7 @@
 }
 
 .titleProductSection {
-    font-family: 'Futura', sans-serif;
+    font-family: 'Jost';
   letter-spacing: 4px;
   line-height: 39px;
   font-weight: 100;
@@ -150,7 +150,7 @@
   letter-spacing: 2px;
   transition: background 0.3s ease;
   text-decoration: none;
-  font-family: 'Futura', sans-serif;
+ font-family: 'Jost';
 }
 
 .shop-view-all:hover {
@@ -178,7 +178,7 @@
 
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+ font-family: 'Jost';
 }
 
 .overlay {
@@ -228,7 +228,7 @@ body {
   letter-spacing: 1px;
   transition: background 0.3s ease;
   text-decoration: none;
-  font-family: 'Futura', sans-serif;
+ font-family: 'Jost';
 }
 
 .modal p {

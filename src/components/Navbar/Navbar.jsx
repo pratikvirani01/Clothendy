@@ -4,13 +4,31 @@ import { IoBagOutline, IoChevronForward } from "react-icons/io5";
 import { IoSearchOutline } from "react-icons/io5";
 import { PiUserLight } from "react-icons/pi";
 import { GiHamburgerMenu } from "react-icons/gi";
-
+import { Link } from "react-router-dom";
+import CartDrawer from "../CartDrawer/CartDrawer";
+const sampleCart = [
+  {
+    image: "/bigproductImage.jpg",
+    title: "Black Ikkat Cotton Kurta",
+    price: 1350,
+    size: "XXS",
+    qty: 1,
+  },
+  {
+    image: "/bigproductImage.jpg",
+    title: "Half White & Blue Ajrakh Kurta",
+    price: 1750,
+    size: "XXS",
+    qty: 1,
+  },
+];
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [showNav, setShowNav] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [activeSubmenu, setActiveSubmenu] = useState(null);
+  const [cartOpen, setCartOpen] = useState(false);
 
   useEffect(() => {
     const controlNavbar = () => {
@@ -46,15 +64,22 @@ const Navbar = () => {
           Thennzhi <span>Designs 🥰🥵</span>
         </div>
         <div className="icons">
-          <PiUserLight />
-          <IoSearchOutline />
-          <IoBagOutline />
+          <button className="icon-button">
+            <PiUserLight className="icon" />
+          </button>
+          <button className="icon-button">
+            <IoSearchOutline className="icon" />
+          </button>
+          <button className="icon-button" onClick={() => setCartOpen(true)}>
+            <IoBagOutline className="icon" />
+          </button>
         </div>
       </div>
+      
 
       <nav className={`nav-links ${isMenuOpen ? "open" : ""}`}>
         <a href="/">Home</a>
-        <a href="/About">About Us</a>
+
         <a href="/NewArrivals">New Arrivals</a>
 
         {/* Regular Dropdown */}
@@ -85,10 +110,15 @@ const Navbar = () => {
             </div>
             <div className="mega-column">
               <h4>Shop by Fabric</h4>
-              <a href="#">Kanchipuram Silk Sarees</a>
-              <a href="#">Chanderi</a>
-              <a href="#">Narayanpet</a>
-              <a href="#">Mangalagiri</a>
+              <a href="#">LINEN SAREE</a>
+              <a href="#">DOLA SILK</a>
+              <a href="#">CRAPE SILK</a>
+              <a href="#">ORGANZA</a>
+              <a href="#">Georgette</a>
+              <a href="#">CHINON</a>
+              <a href="#">CHANDERI</a>
+              <a href="#">BANARASI</a>
+              <a href="#">CHIFFON</a>
             </div>
             <div className="mega-column">
               <h4>Shop by Occasion</h4>
@@ -120,9 +150,15 @@ const Navbar = () => {
         </div>
 
         <a href="/codeSet">Code Set</a>
+        <a href="/instagram">Salwars</a>
         <a href="/deals">Deals</a>
-        <a href="/instagram">Instagram Feed</a>
+        <a href="/About">About Us</a>
       </nav>
+      <CartDrawer
+        isOpen={cartOpen}
+        onClose={() => setCartOpen(false)}
+        cartItems={sampleCart}
+      />
     </header>
   );
 };

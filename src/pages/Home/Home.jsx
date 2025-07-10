@@ -3,6 +3,7 @@ import "./Home.css";
 import ProductSlider from "../../components/ProductSlider/ProductSlider";
 import Footer from "../../components/Footer/Footer";
 import BigProduct from "../../components/BigProduct/BigProduct";
+import CartDrawer from "../../components/CartDrawer/CartDrawer";
 
 const images = [
   {
@@ -97,7 +98,6 @@ const Home = () => {
     setShowModal(false);
   };
 
-
   const bigProducts = [
     {
       title: "Pure Kanchipuram Silk Sarees",
@@ -131,6 +131,23 @@ const Home = () => {
     },
   ];
 
+  const sampleCart = [
+    {
+      image: "/bigproductImage.jpg",
+      title: "Black Ikkat Cotton Kurta",
+      price: 1350,
+      size: "XXS",
+      qty: 1,
+    },
+    {
+      image: "/bigproductImage.jpg",
+      title: "Half White & Blue Ajrakh Kurta",
+      price: 1750,
+      size: "XXS",
+      qty: 1,
+    },
+  ];
+
   return (
     <div className="mainContainer">
       <div className="slider-container">
@@ -158,7 +175,9 @@ const Home = () => {
       <h2 className="titleProductSection">New Arrivals</h2>
       <ProductSlider products={products} />
       <div className="commoneButton">
-        <button className="shop-view-all">VIEW ALL</button>
+        <button className="shop-view-all">
+          VIEW ALL
+        </button>
       </div>
 
       <hr className="slider-separator" />

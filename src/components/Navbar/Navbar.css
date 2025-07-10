@@ -33,7 +33,7 @@
   text-align: center;
   font-size: 1.8rem;
   font-weight: bold;
-  font-family: "Dancing Script", cursive;
+  font-family: 'Jost';
 }
 
 .logo span {
@@ -69,7 +69,7 @@
 
 .nav-links a {
   position: relative;
-  font-family: "Futura", sans-serif;
+   font-family: 'Jost';
   text-transform: uppercase;
   letter-spacing: 2px;
   font-weight: 100;
@@ -149,7 +149,7 @@
   text-align: center;
   font-size: 1.8rem;
   font-weight: bold;
-  font-family: "Dancing Script", cursive;
+  font-family: 'Jost';
 }
 
 .logo span {
@@ -183,7 +183,7 @@
 }
 
 .nav-links a {
-  font-family: "Futura", sans-serif;
+  font-family: 'Jost';
   text-transform: uppercase;
   letter-spacing: 2px;
   font-weight: 100;
@@ -223,7 +223,7 @@
 
 .dropdown-trigger {
   position: relative;
-  font-family: "Futura", sans-serif;
+  font-family: 'Jost';
   text-transform: uppercase;
   letter-spacing: 2px;
   font-weight: 100;
@@ -318,7 +318,7 @@
 .fullwidth-dropdown .mega-dropdown-content {
   display: none; /* Changed from grid to none */
   position: fixed;
-  top: 105px; /* adjust if your navbar is taller */
+  top: 100px; /* adjust if your navbar is taller */
   left: 0;
   width: 100vw;
   background-color: #fff;
@@ -402,6 +402,9 @@
   display: block;
 }
 
+.nav-submenu-content a::after {
+  display: none !important;
+}
 /* === Submenu (nested) === */
 
 .nav-submenu-item {
@@ -450,11 +453,11 @@
   text-decoration: none;
 }
 
-.nav-dropdown-menu a:hover,
+/* .nav-dropdown-menu a:hover,
 .nav-submenu-content a:hover {
   background-color: #f8f8f8;
   color: #f24e4e;
-}
+} */
 
 /* === Mobile Override === */
 @media (max-width: 768px) {
@@ -551,4 +554,17 @@
     grid-template-columns: repeat(2, 1fr);
     padding: 20px;
   }
+}
+
+.icon-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon {
+  font-size: 22px; /* Adjust size as needed */
+  color: #000;     /* Set your desired icon color */
 }
