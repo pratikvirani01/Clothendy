@@ -29,3 +29,27 @@
   min-width: 12px;
   text-align: center;
 }
+
+.cart-items {
+  flex: 1;
+  overflow-y: auto;
+  max-height: 60vh; /* Add this line if it's missing */
+  padding-right: 5px; /* optional for scrollbar padding */
+}
+
+.cart-items {
+  flex: 1;
+  overflow-y: auto;
+  max-height: 60vh;
+  padding-right: 4px;
+}
+
+/* Optional: Nice scrollbar for webkit browsers */
+.cart-items::-webkit-scrollbar {
+  width: 6px;
+}
+
+.cart-items::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+}

@@ -1,7 +1,24 @@
 import React from "react";
 import "./CartItem.css";
 
-const CartItem = ({ item }) => {
+const CartItem = ({ item, onUpdateQuantity, onRemove }) => {
+  const handleIncrement = () => {
+    onUpdateQuantity(item.id, item.qty + 1);
+  };
+
+  const handleDecrement = () => {
+    if (item.qty > 1) {
+      onUpdateQuantity(item.id, item.qty - 1);
+    } else {
+      // Optionally remove item if quantity reaches 0
+      onRemove(item.id);
+    }
+  };
+
+  const handleRemove = () => {
+    onRemove(item.id);
+  };
+
   return (
     <div className="cart-item">
       <img src={item.image} alt={item.title} />
@@ -11,11 +28,13 @@ const CartItem = ({ item }) => {
         <p>{item.size}</p>
         <div className="qty-controls">
           <div className="incressItem">
-            <button>-</button>
+            <button onClick={handleDecrement}>-</button>
             <span>{item.qty}</span>
-            <button>+</button>
+            <button onClick={handleIncrement}>+</button>
           </div>
-          <a href="#">Remove</a>
+          <a href="#" onClick={(e) => { e.preventDefault(); handleRemove(); }}>
+            Remove
+          </a>
         </div>
       </div>
     </div>

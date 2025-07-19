@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 
 const SignIn = () => {
   const navigate = useNavigate();
+  
   const handleContinue = () => {
     // You can also validate email before navigating
     navigate("/EnterCode");

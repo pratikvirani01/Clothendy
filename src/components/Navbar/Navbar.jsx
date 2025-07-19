@@ -4,7 +4,7 @@ import { IoBagOutline, IoChevronForward } from "react-icons/io5";
 import { IoSearchOutline } from "react-icons/io5";
 import { PiUserLight } from "react-icons/pi";
 import { GiHamburgerMenu } from "react-icons/gi";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import CartDrawer from "../CartDrawer/CartDrawer";
 const sampleCart = [
   {
@@ -23,6 +23,7 @@ const sampleCart = [
   },
 ];
 const Navbar = () => {
+  const navigate = useNavigate();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [showNav, setShowNav] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
@@ -54,6 +55,10 @@ const Navbar = () => {
     setActiveSubmenu(activeSubmenu === submenu ? null : submenu);
   };
 
+    const handleClickAuth = () => {
+    navigate("/SignIn");
+  };
+
   return (
     <header className={`navbar ${showNav ? "visible" : "hidden"}`}>
       <div className="navbar-top">
@@ -64,9 +69,9 @@ const Navbar = () => {
           Thennzhi <span>Designs 🥰🥵</span>
         </div>
         <div className="icons">
-          <button className="icon-button">
-            <PiUserLight className="icon" />
-          </button>
+          <button className="icon-button" onClick={handleClickAuth}>
+      <PiUserLight className="icon" />
+    </button>
           <button className="icon-button">
             <IoSearchOutline className="icon" />
           </button>
