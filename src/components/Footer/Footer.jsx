@@ -171,7 +171,7 @@ const Footer = () => {
                 patterns, hues and fabric.
               </p>
               <div>
-                <p className="customer-care-title">Customer Care</p>
+                <h3 className="footer-section-title">Customer Care</h3>
                 <p className="customer-care-info">9AM - 5PM</p>
                 <p className="customer-care-info">Sunday Holiday</p>
               </div>
