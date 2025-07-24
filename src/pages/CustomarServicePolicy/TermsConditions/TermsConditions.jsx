@@ -87,16 +87,16 @@ const TermsConditions = () => {
               sending you:
             </p>
 
-            <li>
-              ‘Administrative Emails’ involve details of account activity and
+            <p>
+              - ‘Administrative Emails’ involve details of account activity and
               purchases you have made.
-            </li>
-            <li>
-              ‘Promotional Emails’ consist of product information, new offers
+            </p>
+            <p>
+              - ‘Promotional Emails’ consist of product information, new offers
               and information about us. You may choose to opt-out of receiving
               Promotional Emails anytime by simply clicking the unsubscribe
               button at the bottom of our emails and following the instructions.
-            </li>
+            </p>
 
             <h2>ONLINE STORE TERMS</h2>
             <p>
@@ -138,7 +138,7 @@ const TermsConditions = () => {
               the product..
             </p>
 
-            <h2>INTELLECTUAL PROPERTY RIGHTS:t</h2>
+            <h2>INTELLECTUAL PROPERTY RIGHTS</h2>
 
             <p>
               Unless otherwise indicated or anything contained to the contrary
@@ -164,7 +164,7 @@ const TermsConditions = () => {
               prohibited.
             </p>
 
-            <h2>LINKS TO THIRD-PARTY SITES:</h2>
+            <h2>LINKS TO THIRD-PARTY SITES</h2>
             <p>
               Certain content, products and services available via our Service
               may include materials from third-parties. Third-party links on
@@ -183,7 +183,7 @@ const TermsConditions = () => {
               directed to the third-party.
             </p>
 
-            <h2>PRICING:</h2>
+            <h2>PRICING</h2>
             <p>
               Prices for products are described on our Website and are
               incorporated into these Terms by reference. Prices, products and
@@ -210,7 +210,7 @@ const TermsConditions = () => {
               violation of any law or the rights of a third-party.
             </p>
 
-            <h2>TERMINATION:</h2>
+            <h2>TERMINATION</h2>
             <p>
               We may suspend or terminate your use of the Website or any Service
               if it believes, in its sole and absolute discretion that you have
@@ -222,7 +222,7 @@ const TermsConditions = () => {
               ordered till the time of Termination by either party whatsoever.
             </p>
 
-            <h2>HEADINGS:</h2>
+            <h2>HEADINGS</h2>
             <p>
               The headings and subheadings herein are included for convenience
               and identification only and are not intended to describe,
@@ -232,7 +232,7 @@ const TermsConditions = () => {
               any Linked Sites in any manner whatsoever.
             </p>
 
-            <h2>REPORT ABUSE:</h2>
+            <h2>REPORT ABUSE</h2>
             <p>
               {" "}
               As per these Terms, users are solely responsible for every
@@ -252,19 +252,19 @@ const TermsConditions = () => {
               partial item/partial order through Customer Care
             </p>
 
-            <li>
-              The customer is supposed to claim for pilferage within 24 hours of
+            <p>
+              - The customer is supposed to claim for pilferage within 24 hours of
               delivery failing which the claim will not be entertained
-            </li>
-            <li>
-              An Email will be sent seeking/providing following information:
-            </li>
-            <li>
-              Short description of the case (A few questions will be asked to
+            </p>
+            <p>
+              - An Email will be sent seeking/providing following information:
+            </p>
+            <p>
+              - Short description of the case (A few questions will be asked to
               help us understand the scenario)
-            </li>
-            <li>
-              The snapshots of the packet and other box (If any) (Try to cover
+            </p>
+            <p>
+              - The snapshots of the packet and other box (If any) (Try to cover
               the sides which look tampered/damaged as per the customer) The
               customer may not be liable for a refund if he/she falls in any of
               the scenarios stated below: A. Customer fails to provide adequate
@@ -273,7 +273,7 @@ const TermsConditions = () => {
               received, pilferage claims must be made the same day D. Customer
               must not dispose the packaging for 3-4 days post delivery. We
               might need to pick-up your packaging for investigation at our end.
-            </li>
+            </p>
 
             <h2>ENTIRE AGREEMENT</h2>
             <p>

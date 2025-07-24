@@ -5,7 +5,7 @@
   height: 100%;
   width: 100%;
   background: rgba(0, 0, 0, 0.4); 
-  z-index: 999;
+  z-index: 1100;
   opacity: 0;
   transition: opacity 0.3s ease;
   pointer-events: none;
@@ -25,7 +25,7 @@
   background: #fdfdfd;
   box-shadow: -2px 0 5px rgba(0, 0, 0, 0.15);
   transition: right 0.4s ease-in-out;
-  z-index: 1000;
+  z-index: 1100;
   display: flex;
   flex-direction: column;
   padding: 20px;
@@ -251,7 +251,6 @@ body.drawer-open {
   }
 }
 
-
 @media (max-width: 768px) {
   .checkout-bar {
     position: sticky;
@@ -268,6 +267,7 @@ body.drawer-open {
 }
 
 @media (max-width: 480px) {
+  
   .cart-header h2 {
     font-size: 18px;
   }

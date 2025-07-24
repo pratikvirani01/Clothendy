@@ -36,7 +36,7 @@ const PrivacyPolicy = () => {
             </p>
 
             <h2>PERSONAL INFORMATION</h2>
-            <h2>What kind of personal information does Clothendy collect?</h2>
+            <h2>What kind of personal information does Clothendy collect ?</h2>
 
             <p>
               We may collect personal information from you, such as your name,
@@ -48,7 +48,7 @@ const PrivacyPolicy = () => {
               make online or by phone.
             </p>
 
-            <h2>
+            <p>
               We allow you to register and log into Clothendy and connect your
               Clothendy account to your social media account. If you elect to
               connect your social media account to your Clothendy account,
@@ -62,7 +62,7 @@ const PrivacyPolicy = () => {
               with this Privacy Policy. For information about the information
               that Clothendy shares with the social media account, please see
               “Does Clothendy share my personal information?”
-            </h2>
+            </p>
 
             <p>
               Please be aware that exchanges are only possible within 7 days
@@ -76,65 +76,65 @@ const PrivacyPolicy = () => {
               eligible for exchanges.
             </p>
 
-            <h2>How does Clothendy use my personal information?</h2>
-            <h2>We may use your personal information in the following ways:</h2>
+            <h2>How does Clothendy use my personal information ?</h2>
+            <h2>We may use your personal information in the following ways</h2>
 
-            <li>
-              To process and fulfill your order, including sending you emails to
+            <p>
+              - To process and fulfill your order, including sending you emails to
               confirm your order status and shipment
-            </li>
-            <li>
-              To communicate with you and to send you information by email,
+            </p>
+            <p>
+              - To communicate with you and to send you information by email,
               postal mail, telephone, text message, or other means about our
               products, services, contests, and promotions, unless you have
               directed us not to contact you with promotional communications
-            </li>
-            <li>To administer and fulfill our contests and other promotions</li>
-            <li>To help us learn more about your shopping preferences</li>
-            <li>
-              To help us address problems with and improve our site design,
+            </p>
+            <p>- To administer and fulfill our contests and other promotions</p>
+            <p>- To help us learn more about your shopping preferences</p>
+            <p>
+              - To help us address problems with and improve our site design,
               products and services
-            </li>
-            <li>To enhance your shopping experience online</li>
-            <li>To analyze trends and statistics</li>
-            <li>
-              To protect the security or integrity of our website and our
+            </p>
+            <p>- To enhance your shopping experience online</p>
+            <p>- To analyze trends and statistics</p>
+            <p>
+              - To protect the security or integrity of our website and our
               business
-            </li>
-            <li>To contact you if necessary</li>
-            <li>To facilitate social sharing functionality</li>
+            </p>
+            <p>- To contact you if necessary</p>
+            <p>- To facilitate social sharing functionality</p>
 
-            <h2>Does Clothendy share my personal information?</h2>
+            <h2>Does Clothendy share my personal information ?</h2>
             <h2>
               We may share your personal information in the following ways:
             </h2>
 
-            <li>
+            <p>
               We may share your information with our service providers who
               manage our customer information and perform services on our
               behalf, such as fulfilling promotions, sending communications to
               our customers, conducting surveys, etc. We do not authorize any of
               these service providers to make any other use or disclosure of
               your information.
-            </li>
-            <li>
+            </p>
+            <p>
               We may share your information when we team up with another company
               to jointly offer or provide products, services, contests, or
               promotions to our customers.
-            </li>
-            <li>
+            </p>
+            <p>
               We may share your information to comply with laws or regulations
               or in response to a valid subpoena, order, or government request,
               or to protect the rights of Clothendy or others.
-            </li>
-            <li>
+            </p>
+            <p>
               In addition, if you choose to participate in any third-party
               script, loyalty, or similar program in which a Clothendy brand is
               a participating vendor, and you authorize Clothendy or our credit
               card processor to provide information about your purchases to the
               organization administering the program, we will share your
               personal information with that program.
-            </li>
+            </p>
 
             <p>
               In the unlikely event of a sale or merger of Clothendy or any of
@@ -159,7 +159,7 @@ const PrivacyPolicy = () => {
               participate in social sharing on our website.
             </p>
 
-            <h2>How do I access or change my personal information?</h2>
+            <h2>How do I access or change my personal information ?</h2>
             <p>
               You can review and change certain personal information related to
               your use of our online website (such as your name and contact
@@ -204,7 +204,7 @@ const PrivacyPolicy = () => {
               may also need to contact you via telephone, email or postal mail
               with questions or information regarding your order.
             </p>
-            <h2>How does Clothendy protect kids’ privacy?</h2>
+            <h2>How does Clothendy protect kids’ privacy ?</h2>
 
             <p>
               Clothendy is concerned about the privacy and safety of children
@@ -238,7 +238,7 @@ const PrivacyPolicy = () => {
               information.
             </p>
 
-            <h2>How Does Clothendy Collect Other Information?</h2>
+            <h2>How Does Clothendy Collect Other Information ?</h2>
 
             <p>
               We and our third party service providers may collect other
@@ -260,7 +260,7 @@ const PrivacyPolicy = () => {
               member base and/or processing sales transactions.
             </p>
 
-            <h2>How does Clothendy use cookies?</h2>
+            <h2>How does Clothendy use cookies ?</h2>
 
             <p>
               We use “cookies,” which are small data files that are stored on
@@ -284,7 +284,7 @@ const PrivacyPolicy = () => {
               whether or not to accept it.
             </p>
 
-            <h2>How does Clothendy use pixel tags?</h2>
+            <h2>How does Clothendy use pixel tags ?</h2>
 
             <p>
               We use “pixel tags” (also called “web beacons” or “clear gifs”),
@@ -339,7 +339,7 @@ const PrivacyPolicy = () => {
               have a particular telephone area code).
             </p>
 
-            <h2>How We Use and Disclose Other Information?</h2>
+            <h2>How We Use and Disclose Other Information ?</h2>
             <p>
               Please note that we may use and disclose Other Information for any
               purpose, except where we are required to do otherwise under
@@ -368,7 +368,7 @@ const PrivacyPolicy = () => {
               credit card information through email.
             </p>
 
-            <h2>What about links to other websites?</h2>
+            <h2>What about links to other websites ?</h2>
             <p>
               For your convenience and information, our website may contain
               links to other sites, which may have privacy policies that differ
@@ -377,7 +377,7 @@ const PrivacyPolicy = () => {
               policy of any site that you access through our website.
             </p>
 
-            <h2>How do I know my personal information is secure?</h2>
+            <h2>How do I know my personal information is secure ?</h2>
 
             <p>
               We take precautions, including the use of encryption technologies
@@ -396,8 +396,6 @@ const PrivacyPolicy = () => {
               you have accessed a secure server, the first characters of the
               address in that line should change from “http” to “https.”
             </p>
-
-            
           </div>
         </section>
       </div>

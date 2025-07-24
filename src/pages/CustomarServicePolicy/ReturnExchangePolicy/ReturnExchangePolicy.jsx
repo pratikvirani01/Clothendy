@@ -10,7 +10,7 @@ const ReturnExchangePolicy = () => {
         <section className="about-container">
           <div className="about-content">
             <h2>Return, Exchange and Cancellation Policy</h2>
-            <h2>For Saree, Chaniya Choli & Salwar:</h2>
+            <h2>For Saree, Chaniya Choli & Salwar</h2>
             <p>
               As a policy we do not provide money refund or exchange on any
               product once the products are sold, they can be exchanged if the

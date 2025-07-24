@@ -21,7 +21,7 @@ const CartDrawer = ({ isOpen, onClose }) => {
       image: "/bigproductImage.jpg",
     },
      {
-      id: 2,
+      id: 3,
       title: "Sample Product 2",
       price: 799.99,
       size: "L",
@@ -29,7 +29,7 @@ const CartDrawer = ({ isOpen, onClose }) => {
       image: "/bigproductImage.jpg",
     },
      {
-      id: 2,
+      id: 4,
       title: "Sample Product 2",
       price: 799.99,
       size: "L",

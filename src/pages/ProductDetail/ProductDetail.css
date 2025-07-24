@@ -1,0 +1,244 @@
+.product-page {
+  display: flex;
+  gap: 40px;
+  padding: 30px;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.scroll-image-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  overflow-y: auto;
+  max-height: 160vh;
+  width: 550px;
+}
+
+.scroll-image-section img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.product-info {
+  max-width: 400px;
+}
+
+.price {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.rating {
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 20px;
+}
+
+.quantity-control {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.quantity-control button {
+  width: 30px;
+  height: 30px;
+  font-size: 16px;
+}
+
+.gift-wrap {
+  margin: 15px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.blouse-stitching {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 44px;
+  height: 24px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  background-color: #ccc;
+  border-radius: 34px;
+  transition: 0.4s;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.slider::before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  background-color: white;
+  border-radius: 50%;
+  bottom: 4px;
+  left: 4px;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #f50057;
+}
+
+input:checked + .slider::before {
+  transform: translateX(20px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.add-to-cart, .buy-now {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 12px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.add-to-cart {
+  background-color: white;
+  border: 1px solid #333;
+}
+
+.buy-now {
+  background-color: #000;
+  color: white;
+  border: none;
+}
+
+.size-chart {
+  display: inline-block;
+  margin: 15px 0;
+  color: #b0005c;
+  font-weight: bold;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.description {
+  margin-top: 20px;
+}
+
+.blouse-section {
+  margin-top: 30px;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.blouse-section h4 {
+  margin-bottom: 10px;
+}
+
+.disclaimer {
+  margin: 15px 0;
+  color: #444;
+}
+
+.delivery-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.tag {
+  background: #f3f3f3;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+}
+
+.tag.red {
+  color: red;
+  font-weight: bold;
+  background: #fff5f5;
+  border: 1px solid #ffa1a1;
+}
+
+.accordion {
+  border-top: 1px solid #ddd;
+  margin-top: 20px;
+}
+
+.accordion details {
+  border-bottom: 1px solid #ddd;
+  padding: 12px 0;
+}
+
+.accordion summary {
+  list-style: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+  position: relative;
+  padding-left: 25px;
+  display: flex;
+  align-items: center;
+}
+
+.accordion summary::before {
+  content: "+";
+  position: absolute;
+  left: 0;
+  font-size: 20px;
+  line-height: 1;
+  transition: 0.3s ease;
+  font-weight: 500;
+}
+
+.accordion details[open] summary::before {
+  content: "−";
+}
+
+.accordion p {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #555;
+  padding-left: 5px;
+}
+
+@media (max-width: 768px) {
+  .product-page {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .scroll-image-section {
+    max-height: 60vh;
+    width: 100%;
+  }
+
+  .product-info {
+    width: 100%;
+  }
+}

@@ -2,6 +2,7 @@ import React, { useState, useRef } from "react";
 import "./ProductSlider.css";
 import { IoCart } from "react-icons/io5";
 import { IoMdAdd } from "react-icons/io";
+import { useNavigate } from "react-router-dom";
 
 const ProductSlider = ({ products }) => {
     const [startIndex, setStartIndex] = useState(0);
@@ -9,6 +10,7 @@ const ProductSlider = ({ products }) => {
     const isDragging = useRef(false);
     const startX = useRef(0);
     const scrollLeft = useRef(0);
+      const navigate = useNavigate(); 
 
     const nextSlide = () => setStartIndex((prev) => (prev + 4) % products.length);
     const prevSlide = () => setStartIndex((prev) => (prev === 0 ? products.length - 4 : prev - 4));
@@ -35,6 +37,11 @@ const ProductSlider = ({ products }) => {
         isDragging.current = false;
     };
 
+       const handleProductClick = () => {
+        // Navigate to product detail page with the product ID
+        navigate(`/ProductDetail`);
+    };
+
     return (
         <div className="product-slider">
             <button className="nav-btn left" onClick={prevSlide}>‹</button>
@@ -48,7 +55,7 @@ const ProductSlider = ({ products }) => {
             >
                 {products.slice(startIndex, startIndex + 4).map((item, idx) => (
                     <div className="product-card" key={idx}>
-                        <div className="image-wrapper">
+                        <div className="image-wrapper"  onClick={() => handleProductClick(item.id)}>
                             <img
                                 src={item.image}
                                 alt={item.title}

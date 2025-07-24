@@ -22,48 +22,56 @@ const images = [
 
 const products = [
   {
+    id: 1,
     image: "/sliderImages.jpg",
     hoverImage: "/banner-image.jpg",
     title: "Scarlet Red Alia Cut Printed Co-ord Set",
     price: "2,500",
   },
   {
+    id: 2,
     image: "/sliderImages.jpg",
     hoverImage: "/banner-image.jpg",
     title: "Coral Orange Cotton Suit with Kota Dupatta",
     price: "2,500",
   },
   {
+    id: 3,
     image: "/sliderImages.jpg",
     hoverImage: "/banner-image.jpg",
     title: "Shoulder Cut Light Marigold Suit",
     price: "2,500",
   },
   {
+    id: 4,
     image: "/sliderImages.jpg",
     hoverImage: "/banner-image.jpg",
     title: "Twilight Blossom Printed Co-ord Set",
     price: "2,000",
   },
   {
+    id: 5,
     image: "/sliderImages.jpg",
     hoverImage: "/banner-image.jpg",
     title: "Dark Blue Chiffon Saree",
     price: "2,800",
   },
   {
+    id: 6,
     image: "/sliderImages.jpg",
     hoverImage: "/banner-image.jpg",
     title: "Yellow Embroidered Kurti",
     price: "2,200",
   },
   {
+    id: 7,
     image: "/sliderImages.jpg",
     hoverImage: "/banner-image.jpg",
     title: "Yellow Embroidered Kurti",
     price: "2,200",
   },
   {
+    id: 8,
     image: "/sliderImages.jpg",
     hoverImage: "/banner-image.jpg",
     title: "Yellow Embroidered Kurti",

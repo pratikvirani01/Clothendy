@@ -10,7 +10,7 @@ const ContactUs = () => {
         <section className="about-container">
           <div className="about-content">
             <h2>Shoot an email!</h2>
-            <h2>support@Clothendy.com</h2>
+            <h2>support@clothendy.com</h2>
           </div>
         </section>
       </div>

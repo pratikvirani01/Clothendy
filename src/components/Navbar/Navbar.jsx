@@ -55,7 +55,7 @@ const Navbar = () => {
     setActiveSubmenu(activeSubmenu === submenu ? null : submenu);
   };
 
-    const handleClickAuth = () => {
+  const handleClickAuth = () => {
     navigate("/SignIn");
   };
 
@@ -70,8 +70,8 @@ const Navbar = () => {
         </div>
         <div className="icons">
           <button className="icon-button" onClick={handleClickAuth}>
-      <PiUserLight className="icon" />
-    </button>
+            <PiUserLight className="icon" />
+          </button>
           <button className="icon-button">
             <IoSearchOutline className="icon" />
           </button>
@@ -80,7 +80,6 @@ const Navbar = () => {
           </button>
         </div>
       </div>
-      
 
       <nav className={`nav-links ${isMenuOpen ? "open" : ""}`}>
         <a href="/">Home</a>

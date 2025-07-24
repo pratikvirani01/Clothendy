@@ -12,6 +12,7 @@ import PrivacyPolicy from "./pages/CustomarServicePolicy/PrivacyPolicy/PrivacyPo
 import TermsConditions from "./pages/CustomarServicePolicy/TermsConditions/TermsConditions";
 import ContactUs from "./pages/CustomarServicePolicy/ContactUs/ContactUs";
 import About from "./pages/About/About";
+import ProductDetail from "./pages/ProductDetail/ProductDetail";
 
 function App() {
   return (
@@ -30,7 +31,8 @@ function App() {
         />
         <Route path="/PrivacyPolicy" element={<PrivacyPolicy />} />
         <Route path="/TermsConditions" element={<TermsConditions />} />
-        <Route path="/ContactUs" element={<ContactUs />} />
+        <Route path="/ContactUs" element={<ContactUs />} /> 
+         <Route path="/ProductDetail" element={<ProductDetail />} />
         {/* Add other routes as needed */}
       </Routes>
     </Router>
