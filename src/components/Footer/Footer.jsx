@@ -13,6 +13,8 @@ import {
   Image,
 } from "lucide-react";
 import "./Footer.css";
+import { Link } from "react-router-dom";
+
 
 const Footer = () => {
   const scrollRef = useRef(null);
@@ -121,22 +123,36 @@ const Footer = () => {
             {/* Quick Links */}
             <div>
               <h3 className="footer-section-title">Quick Links</h3>
-              <ul className="footer-links">
-                {[
-                  "Return and Store Credit Request",
-                  "Order Status",
-                  "My Account",
-                  "Cart",
-                  "Frequently Asked Questions",
-                  "Blog",
-                ].map((link) => (
-                  <li key={link}>
+                <ul className="footer-links">
+                  <li>
                     <a href="#" className="footer-link">
-                      {link}
+                      Return and Store Credit Request
                     </a>
                   </li>
-                ))}
-              </ul>
+                  <li>
+                    <a href="#" className="footer-link">
+                      Order Status
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" className="footer-link">
+                      My Account
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" className="footer-link">
+                      Cart
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" className="footer-link">
+                      Frequently Asked Questions
+                    </a>
+                  </li>
+                    <a href="/Blog" className="footer-link">
+                      Blog
+                    </a>
+                </ul>
             </div>
 
             {/* Customer Service */}

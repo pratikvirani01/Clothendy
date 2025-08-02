@@ -1,9 +1,11 @@
-import React, { useState, useRef } from "react";
-import "./ProductSlider.css";
-import { IoCart } from "react-icons/io5";
+import React, { useState } from "react";
+import Slider from "react-slick";
 import { IoMdAdd } from "react-icons/io";
 import { useNavigate } from "react-router-dom";
 import CartDrawer from "../CartDrawer/CartDrawer";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import "./ProductSlider.css";
 
 const sampleCart = [
   {
@@ -23,101 +25,120 @@ const sampleCart = [
 ];
 
 const ProductSlider = ({ products }) => {
-  const [startIndex, setStartIndex] = useState(0);
   const [cartOpen, setCartOpen] = useState(false);
-  const sliderRef = useRef(null);
-  const isDragging = useRef(false);
-  const startX = useRef(0);
-  const scrollLeft = useRef(0);
   const navigate = useNavigate();
 
-  const nextSlide = () => setStartIndex((prev) => (prev + 4) % products.length);
-  const prevSlide = () =>
-    setStartIndex((prev) => (prev === 0 ? products.length - 4 : prev - 4));
-
-  const handleMouseDown = (e) => {
-    isDragging.current = true;
-    startX.current = e.pageX - sliderRef.current.offsetLeft;
-    scrollLeft.current = sliderRef.current.scrollLeft;
-  };
-
-  const handleMouseMove = (e) => {
-    if (!isDragging.current) return;
-    e.preventDefault();
-    const x = e.pageX - sliderRef.current.offsetLeft;
-    const walk = (x - startX.current) * 1.5; // scroll speed multiplier
-    sliderRef.current.scrollLeft = scrollLeft.current - walk;
-  };
-
-  const handleMouseUp = () => {
-    isDragging.current = false;
-  };
-
-  const handleMouseLeave = () => {
-    isDragging.current = false;
-  };
-
-  const handleProductClick = () => {
-    // Navigate to product detail page with the product ID
-    navigate(`/ProductDetail`);
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 4,
+    arrows: true,
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+       {
+        breakpoint: 320,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
 
   return (
-    <div>
+    <div className="product-slider-container">
       <div className="product-slider">
-        <button className="nav-btn left" onClick={prevSlide}>
-          ‹
-        </button>
-        <div
-          className="slider-view"
-          ref={sliderRef}
-          onMouseDown={handleMouseDown}
-          onMouseMove={handleMouseMove}
-          onMouseUp={handleMouseUp}
-          onMouseLeave={handleMouseLeave}
-        >
-          {products.slice(startIndex, startIndex + 4).map((item, idx) => (
+        <Slider {...settings}>
+          {products.map((item, idx) => (
             <div className="product-card" key={idx}>
               <div
                 className="image-wrapper"
-                onClick={() => handleProductClick(item.id)}
+                onClick={() => navigate(`/ProductDetail`)}
               >
                 <img
                   src={item.image}
                   alt={item.title}
-                  className="product-image main-image"
+                  className="product-image default-image"
                 />
-                {item.hoverImage && (
-                  <img
-                    src={item.hoverImage}
-                    className="product-image hover-image"
-                  />
-                )}
+                <img
+                  src={item.hoverImage}
+                  alt={item.title}
+                  className="product-image hover-image"
+                />
                 <button
                   className="add-to-cart-btn"
-                  title="Add to Cart"
                   onClick={(e) => {
-                    e.stopPropagation()
+                    e.stopPropagation();
                     setCartOpen(true);
                   }}
                 >
                   <IoMdAdd size={20} />
                 </button>
               </div>
-              <h3 className="product-title">{item.title}</h3>
-              <h3 className="product-price">Rs. {item.price}</h3>
+              <div className="product-info">
+                <h3 className="product-title">{item.title}</h3>
+                <p className="product-price">Rs. {item.price}</p>
+              </div>
             </div>
           ))}
-        </div>
-        <button className="nav-btn right" onClick={nextSlide}>
-          ›
-        </button>
+        </Slider>
       </div>
+
       <CartDrawer
         isOpen={cartOpen}
         onClose={() => setCartOpen(false)}
         cartItems={sampleCart}
       />
+    </div>
+  );
+};
+
+const NextArrow = (props) => {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={`${className} custom-slick-arrow custom-next-arrow`}
+      style={{ ...style }}
+      onClick={onClick}
+    >
+      <span>&gt;</span>
+    </div>
+  );
+};
+
+const PrevArrow = (props) => {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={`${className} custom-slick-arrow custom-prev-arrow`}
+      style={{ ...style }}
+      onClick={onClick}
+    >
+      <span>&lt;</span>
     </div>
   );
 };

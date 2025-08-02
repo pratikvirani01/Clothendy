@@ -107,6 +107,33 @@
   margin: 10px 0;
 }
 
+.view-toggle-container {
+  display: flex;
+  gap: 8px;
+  background: #eee;
+  padding: 6px;
+  border-radius: 6px;
+}
+
+.toggle-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #555;
+  padding: 4px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toggle-btn.active {
+  background: #ccc;
+  color: #000;
+}
+
+
+
 /* Responsive for mobile */
 @media screen and (max-width: 768px) {
   .top-row {

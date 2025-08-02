@@ -13,6 +13,12 @@ import TermsConditions from "./pages/CustomarServicePolicy/TermsConditions/Terms
 import ContactUs from "./pages/CustomarServicePolicy/ContactUs/ContactUs";
 import About from "./pages/About/About";
 import ProductDetail from "./pages/ProductDetail/ProductDetail";
+import Sarees from "./pages/BestSellers/Sarees/Sarees";
+import Salwars from "./pages/BestSellers/Salwars/Salwars";
+import CodeSet from "./pages/CodeSet/CodeSet";
+import Deals from "./pages/Deals/Deals";
+import Blog from "./pages/Blog/Blog";
+import BlogDetails from "./pages/Blog/BlogDetails";
 
 function App() {
   return (
@@ -31,8 +37,14 @@ function App() {
         />
         <Route path="/PrivacyPolicy" element={<PrivacyPolicy />} />
         <Route path="/TermsConditions" element={<TermsConditions />} />
-        <Route path="/ContactUs" element={<ContactUs />} /> 
-         <Route path="/ProductDetail" element={<ProductDetail />} />
+        <Route path="/ContactUs" element={<ContactUs />} />
+        <Route path="/ProductDetail" element={<ProductDetail />} />
+        <Route path="/Sarees" element={<Sarees />} />
+        <Route path="/Salwars" element={<Salwars />} />
+        <Route path="/CodeSet" element={<CodeSet />} />
+        <Route path="/Deals" element={<Deals />} />
+        <Route path="/Blog" element={<Blog />} />
+        <Route path="/BlogDetails" element={<BlogDetails />} />
         {/* Add other routes as needed */}
       </Routes>
     </Router>

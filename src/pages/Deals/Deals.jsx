@@ -1,13 +1,9 @@
 import React, { useState } from "react";
-// import ProductToolbar from "../../components/ProductToolbar/ProductToolbar";
-// import FilterSidebar from "../../components/FilterSidebar/FilterSidebar";
-// import ProductGrid from "../../components/ProductGrid/ProductGrid";
-import './Sarees.css';
-import ProductToolbar from "../../../components/ProductToolbar/ProductToolbar";
-import FilterSidebar from "../../../components/FilterSidebar/FilterSidebar";
-import ProductGrid from "../../../components/ProductGrid/ProductGrid";
-import Footer from "../../../components/Footer/Footer";
-// import Footer from "../../components/Footer/Footer";
+import './Deals.css';
+import ProductToolbar from "../../components/ProductToolbar/ProductToolbar";
+import FilterSidebar from "../../components/FilterSidebar/FilterSidebar";
+import ProductGrid from "../../components/ProductGrid/ProductGrid";
+import Footer from "../../components/Footer/Footer";
 
 // const products = [
 //     {
@@ -90,13 +86,13 @@ const products = [
     // add more products as needed
 ];
 
-const Sarees = () => {
+const Deals = () => {
     const [isFilterOpen, setIsFilterOpen] = useState(false);
 
     return (
         <div>
             <div className="mainTitle">
-                <h2>Best Seller - Sarees</h2>
+                <h2>Deals</h2>
             </div>
             <ProductToolbar onFilterOpen={() => setIsFilterOpen(true)} />
             <FilterSidebar isOpen={isFilterOpen} onClose={() => setIsFilterOpen(false)} />
@@ -106,4 +102,4 @@ const Sarees = () => {
     );
 };
 
-export default Sarees;
+export default Deals;

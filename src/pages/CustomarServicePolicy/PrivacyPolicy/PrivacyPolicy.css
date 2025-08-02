@@ -9,7 +9,7 @@
 }
 
 .aboutText {
-  font-family: "Jost";
+  font-family: "Roboto", Arial, sans-serif;
   letter-spacing: 2px;
   font-weight: 100;
   font-size: 28px;
@@ -28,7 +28,7 @@
 .about-content {
   max-width: 900px;
   color: #333;
-  font-family: "Jost";
+  font-family: "Roboto", Arial, sans-serif;
   line-height: 1.8;
 }
 
@@ -37,7 +37,7 @@
   font-size: 17px;
   margin-bottom: 30px;
   font-weight: 600;
-  font-family: "Jost";
+  font-family: "Roboto", Arial, sans-serif;
   letter-spacing: 2px;
   color: #000;
   text-decoration: none;
@@ -45,7 +45,7 @@
 
 .about-content p {
   font-size: 14px;
-  font-family: "Futura", sans-serif;
+  font-family: "Roboto", Arial, sans-serif;
   letter-spacing: 2px;
   font-weight: 100;
   font-size: 14px;

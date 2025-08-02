@@ -32,7 +32,7 @@ const products = [
     id: 2,
     image: "/sliderImages.jpg",
     hoverImage: "/banner-image.jpg",
-    title: "Coral Orange Cotton Suit with Kota Dupatta",
+    title: "Coral Orange Cotton Suit with Kota Dupatta Dupatta Dupatta Dupatta",
     price: "2,500",
   },
   {
@@ -82,6 +82,50 @@ const products = [
 
 const Home = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [countryCode, setCountryCode] = useState("+91");
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const [showOtp, setShowOtp] = useState(false);
+  const [otp, setOtp] = useState(["", "", "", "", ""]);
+  const [isLoading, setIsLoading] = useState(false);
+  const [otpError, setOtpError] = useState("");
+
+  // Handle OTP input change
+  const handleOtpChange = (index, value) => {
+    if (/^\d*$/.test(value)) { // Only allow numbers
+      const newOtp = [...otp];
+      newOtp[index] = value;
+      setOtp(newOtp);
+      setOtpError("");
+      
+      // Auto-focus next input
+      if (value && index < 4) {
+        const nextInput = document.querySelectorAll(".otp-input")[index + 1];
+        if (nextInput) nextInput.focus();
+      }
+    }
+  };
+
+  // Handle OTP verification
+  const handleVerify = () => {
+    const enteredOtp = otp.join("");
+    if (enteredOtp.length !== 5) {
+      setOtpError("Please enter the complete 5-digit OTP");
+      return;
+    }
+    
+    setIsLoading(true);
+    
+    // Simulate API call
+    setTimeout(() => {
+      setIsLoading(false);
+      // In a real app, you would verify with your backend here
+      alert(`OTP ${enteredOtp} verified successfully!`);
+      setShowModal(false);
+      setShowOtp(false);
+      setOtp(["", "", "", "", ""]);
+      setPhoneNumber("");
+    }, 1500);
+  };
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -102,9 +146,17 @@ const Home = () => {
   }, []);
 
   const handleJoin = () => {
-    alert(`Phone number submitted: ${phone}`);
-    setShowModal(false);
-  };
+  // Validate phone number
+  if (phoneNumber.length < 10) {
+    alert("Please enter a valid 10-digit phone number");
+    return;
+  }
+  
+  // In a real app, you would send the OTP to the phone number here
+  // For demo, we'll just show the OTP inputs
+  setShowOtp(true);
+};
+
 
   const bigProducts = [
     {
@@ -183,9 +235,7 @@ const Home = () => {
       <h2 className="titleProductSection">New Arrivals</h2>
       <ProductSlider products={products} />
       <div className="commoneButton">
-        <button className="shop-view-all">
-          VIEW ALL
-        </button>
+        <button className="shop-view-all">VIEW ALL</button>
       </div>
 
       <hr className="slider-separator" />
@@ -208,29 +258,97 @@ const Home = () => {
 
       <BigProduct bigProducts={bigProducts} />
       <div>
-        {showModal && (
-          <div className="overlay">
-            <div className="modal">
-              <button className="close-btn" onClick={() => setShowModal(false)}>
-                ×
-              </button>
-              <h2>Welcome To Thenmozhi Designs</h2>
-              <p>
-                Join us and be the first to get notified when we launch our
-                exclusive collections.
-              </p>
-              <input
-                type="text"
-                value={phone}
-                onChange={(e) => setPhone(e.target.value)}
-                className="phone-input"
-              />
-              <button className="join-button" onClick={handleJoin}>
-                Join Us
-              </button>
-            </div>
+          {showModal && (
+        <div className="overlay">
+          <div className="modal">
+            <button 
+              className="close-btn" 
+              onClick={() => {
+                setShowModal(false);
+                setShowOtp(false);
+                setOtp(["", "", "", "", ""]);
+                setPhoneNumber("");
+              }}
+            >
+              ×
+            </button>
+            <h2>Welcome To Clothendy</h2>
+            <p>
+              Join us and be the first to get notified when we launch our
+              exclusive collections.
+            </p>
+            
+            {!showOtp ? (
+              <>
+                <div className="phone-input-container">
+                  <select
+                    className="country-code"
+                    value={countryCode}
+                    onChange={(e) => setCountryCode(e.target.value)}
+                  >
+                    <option value="+91">India (+91)</option>
+                    <option value="+1">USA (+1)</option>
+                    <option value="+44">UK (+44)</option>
+                    <option value="+971">UAE (+971)</option>
+                    <option value="+65">Singapore (+65)</option>
+                  </select>
+                  <input
+                    type="tel"
+                    value={phoneNumber}
+                    onChange={(e) => {
+                      const value = e.target.value;
+                      if (/^\d*$/.test(value)) {
+                        setPhoneNumber(value);
+                      }
+                    }}
+                    className="phone-input"
+                    placeholder="Enter phone number"
+                    maxLength="10"
+                  />
+                </div>
+                <button
+                  className="join-button"
+                  onClick={handleJoin}
+                  disabled={phoneNumber.length < 10 || isLoading}
+                >
+                  {isLoading ? "Sending OTP..." : "Join Us"}
+                </button>
+              </>
+            ) : (
+              <div className="otp-container">
+                <p>We've sent a 5-digit OTP to {countryCode + phoneNumber}</p>
+                <div className="otp-inputs">
+                  {[...Array(5)].map((_, i) => (
+                    <input
+                      key={i}
+                      type="text"
+                      maxLength="1"
+                      className="otp-input"
+                      value={otp[i] || ""}
+                      onChange={(e) => handleOtpChange(i, e.target.value)}
+                      onKeyDown={(e) => {
+                        // Handle backspace to move to previous input
+                        if (e.key === "Backspace" && !otp[i] && i > 0) {
+                          const prevInput = document.querySelectorAll(".otp-input")[i - 1];
+                          if (prevInput) prevInput.focus();
+                        }
+                      }}
+                    />
+                  ))}
+                </div>
+                {otpError && <p className="error-message">{otpError}</p>}
+                <button 
+                  className="verify-button" 
+                  onClick={handleVerify}
+                  disabled={isLoading}
+                >
+                  {isLoading ? "Verifying..." : "Verify"}
+                </button>
+              </div>
+            )}
           </div>
-        )}
+        </div>
+      )}
       </div>
       <Footer />
     </div>

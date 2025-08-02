@@ -88,12 +88,12 @@ const Navbar = () => {
 
         {/* Regular Dropdown */}
         <div className="dropdown">
-          <a href="/best" className="dropdown-trigger">
+          <a href="/sarees" className="dropdown-trigger">
             Best Sellers
           </a>
           <div className="dropdown-content">
             <a href="/sarees">Sarees</a>
-            <a href="/salwars">Salwars</a>
+            <a href="/Salwars">Salwars</a>
           </div>
         </div>
 
@@ -155,7 +155,7 @@ const Navbar = () => {
 
         <a href="/codeSet">Code Set</a>
         <a href="/instagram">Salwars</a>
-        <a href="/deals">Deals</a>
+        <a href="/Deals">Deals</a>
         <a href="/About">About Us</a>
       </nav>
       <CartDrawer
